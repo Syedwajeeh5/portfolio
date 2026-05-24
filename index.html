@@ -16,28 +16,39 @@ body{
   padding-top:70px;
 }
 
-/* NAV */
+/* NAVBAR FIXED */
 nav{
   position:fixed;
   top:0;
+  left:0;
   width:100%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 40px;
-  background:rgba(10,10,20,0.85);
+  padding:15px 30px;
+  background:rgba(10,10,20,0.9);
   backdrop-filter: blur(12px);
   z-index:1000;
+  box-sizing:border-box;
+}
+
+nav div{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
 nav a{
   color:white;
   text-decoration:none;
-  margin:0 10px;
+  margin:5px 10px;
   font-size:14px;
   transition:0.3s;
 }
-nav a:hover{color:#38bdf8;}
+
+nav a:hover{
+  color:#38bdf8;
+}
 
 /* HERO */
 .hero{
@@ -78,7 +89,7 @@ nav a:hover{color:#38bdf8;}
 
 .cta:hover{
   transform:scale(1.05);
-  box-shadow:0 0 20px rgba(56,189,248,0.5);
+  box-shadow:0 0 20px rgba(56,189,248,0.4);
 }
 
 /* SECTIONS */
@@ -115,12 +126,6 @@ h2{
   box-shadow:0 10px 30px rgba(56,189,248,0.15);
 }
 
-.price{
-  font-size:22px;
-  color:#22c55e;
-  margin-top:10px;
-}
-
 /* SKILLS */
 .skills span{
   display:inline-block;
@@ -136,6 +141,12 @@ h2{
   text-align:center;
 }
 
+.contact .card{
+  max-width:500px;
+  margin:auto;
+  text-align:left;
+}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -149,9 +160,10 @@ footer{
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
   <div><b style="color:#38bdf8;">Wajeeh</b></div>
+
   <div>
     <a href="#services">Services</a>
     <a href="#skills">Skills</a>
@@ -163,7 +175,7 @@ footer{
 <!-- HERO -->
 <div class="hero">
   <div>
-    <h1>I Build Websites That Sell</h1>
+    <h1>I Build Websites That Bring Clients</h1>
     <p>Freelance Web Developer | WordPress | Landing Pages | Business Websites</p>
     <a class="cta" href="#contact">🚀 Hire Me Now</a>
   </div>
@@ -177,20 +189,20 @@ footer{
 
     <div class="card">
       <h3>Business Website</h3>
-      <p>Modern responsive website for your business.</p>
-      <div class="price">$50 - $150</div>
+      <p>Modern responsive website that helps your business get customers.</p>
+      <b style="color:#22c55e">$50 - $150</b>
     </div>
 
     <div class="card">
       <h3>Landing Page</h3>
-      <p>High converting landing pages for sales & ads.</p>
-      <div class="price">$30 - $100</div>
+      <p>High converting landing page for ads, sales & marketing.</p>
+      <b style="color:#22c55e">$30 - $100</b>
     </div>
 
     <div class="card">
       <h3>WordPress Website</h3>
-      <p>Full WordPress setup with customization.</p>
-      <div class="price">$80 - $200</div>
+      <p>Complete WordPress setup with premium customization.</p>
+      <b style="color:#22c55e">$80 - $200</b>
     </div>
 
   </div>
@@ -205,8 +217,8 @@ footer{
     <span>JavaScript</span>
     <span>WordPress</span>
     <span>Responsive Design</span>
-    <span>UI Design</span>
     <span>GitHub</span>
+    <span>UI Design</span>
   </div>
 </section>
 
@@ -216,18 +228,18 @@ footer{
 
   <div class="grid">
     <div class="card">
-      <h3>Restaurant Website</h3>
-      <p>Modern food ordering UI design</p>
+      <h3>Sindhi Dera Restaurant</h3>
+      <p>Modern restaurant website demo with responsive design.</p>
     </div>
 
     <div class="card">
-      <h3>Portfolio Site</h3>
-      <p>Personal branding website</p>
+      <h3>University Project System</h3>
+      <p>Web-based system for managing student projects online.</p>
     </div>
 
     <div class="card">
-      <h3>Business Website</h3>
-      <p>Corporate landing page design</p>
+      <h3>Portfolio Website</h3>
+      <p>Personal branding website for freelance work.</p>
     </div>
   </div>
 </section>
@@ -237,16 +249,18 @@ footer{
   <h2>Let’s Work Together</h2>
 
   <div class="card">
-    Email: <b>Wajeeh</b><br><br>
-    LinkedIn: <a href="https://linkedin.com/in/s-wajeeh" target="_blank" style="color:#38bdf8;">View Profile</a>
+    📧 Email: xhahnaqvi125@gmail.com<br><br>
+    🔗 LinkedIn: <a href="https://linkedin.com/in/s-wajeeh" target="_blank" style="color:#38bdf8;">View Profile</a><br><br>
+    📱 Mob: +92 303 8194658
   </div>
 
   <br>
-  <a class="cta" href="mailto:Xhahnaqvi125@gmail.com">Send Email</a>
+
+  <a class="cta" href="mailto:your-email@gmail.com">Send Email</a>
 </section>
 
 <footer>
-  © 2026 Wajeeh | Freelance Web Developer | All Rights Reserved
+  © 2026 Wajeeh | Freelance Web Developer | Available for Projects
 </footer>
 
 </body>
