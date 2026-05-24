@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wajeeh | Freelance Web Developer</title>
+
+<style>
+html{scroll-behavior:smooth;}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#050816;
+  color:white;
+  padding-top:70px;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:rgba(10,10,20,0.85);
+  backdrop-filter: blur(12px);
+  z-index:1000;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+  font-size:14px;
+  transition:0.3s;
+}
+nav a:hover{color:#38bdf8;}
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  background: radial-gradient(circle at top,#1e293b,#050816);
+}
+
+.hero h1{
+  font-size:58px;
+  margin:0;
+  background:linear-gradient(90deg,#38bdf8,#a78bfa,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  color:#cbd5e1;
+  font-size:18px;
+  margin-top:10px;
+}
+
+.cta{
+  margin-top:25px;
+  display:inline-block;
+  padding:14px 32px;
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  color:black;
+  font-weight:bold;
+  border-radius:12px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.cta:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(56,189,248,0.5);
+}
+
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+h2{
+  color:#38bdf8;
+  font-size:30px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:#38bdf8;
+  box-shadow:0 10px 30px rgba(56,189,248,0.15);
+}
+
+.price{
+  font-size:22px;
+  color:#22c55e;
+  margin-top:10px;
+}
+
+/* SKILLS */
+.skills span{
+  display:inline-block;
+  margin:5px;
+  padding:8px 12px;
+  background:#1e293b;
+  border-radius:8px;
+  font-size:13px;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  border-top:1px solid #1e293b;
+  color:#94a3b8;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div><b style="color:#38bdf8;">Wajeeh</b></div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>I Build Websites That Sell</h1>
+    <p>Freelance Web Developer | WordPress | Landing Pages | Business Websites</p>
+    <a class="cta" href="#contact">🚀 Hire Me Now</a>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>My Services</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Business Website</h3>
+      <p>Modern responsive website for your business.</p>
+      <div class="price">$50 - $150</div>
+    </div>
+
+    <div class="card">
+      <h3>Landing Page</h3>
+      <p>High converting landing pages for sales & ads.</p>
+      <div class="price">$30 - $100</div>
+    </div>
+
+    <div class="card">
+      <h3>WordPress Website</h3>
+      <p>Full WordPress setup with customization.</p>
+      <div class="price">$80 - $200</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>WordPress</span>
+    <span>Responsive Design</span>
+    <span>UI Design</span>
+    <span>GitHub</span>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="projects">
+  <h2>Recent Work</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Restaurant Website</h3>
+      <p>Modern food ordering UI design</p>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Site</h3>
+      <p>Personal branding website</p>
+    </div>
+
+    <div class="card">
+      <h3>Business Website</h3>
+      <p>Corporate landing page design</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Let’s Work Together</h2>
+
+  <div class="card">
+    Email: <b>Wajeeh</b><br><br>
+    LinkedIn: <a href="https://linkedin.com/in/s-wajeeh" target="_blank" style="color:#38bdf8;">View Profile</a>
+  </div>
+
+  <br>
+  <a class="cta" href="mailto:Xhahnaqvi125@gmail.com">Send Email</a>
+</section>
+
+<footer>
+  © 2026 Wajeeh | Freelance Web Developer | All Rights Reserved
+</footer>
+
+</body>
+</html>
