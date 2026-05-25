@@ -64,7 +64,7 @@ nav a:hover{
   { nav 
                           { flex-direction: column; 
                            gap: 10px; 
-                           padding: 15px 20px:
+                           padding: 15px 20px;
                           }
                          }
 
@@ -163,7 +163,7 @@ h2{
   margin:auto;
   text-align:left;
 }
-  back-top{
+  .back-top{
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -259,23 +259,48 @@ footer{
   <h2>Recent Work</h2>
 
   <div class="grid">
+    
+    <!-- Project 1 -->
     <div class="card">
+      <img src="https://via.placeholder.com/400x250/1e293b/38bdf8?text=Restaurant+Website" 
+           alt="Sindhi Dera Restaurant Website" 
+           style="width:100%; border-radius:10px; margin-bottom:12px;">
       <h3>Sindhi Dera Restaurant</h3>
-      <p>Modern restaurant website demo with responsive design.</p>
+      <p>Modern restaurant website with online menu, gallery and mobile responsive design.</p>
+      <div style="margin-top:15px; display:flex; gap:10px;">
+        <a href="#" style="flex:1; text-align:center; padding:8px; background:#38bdf8; color:black; border-radius:8px; text-decoration:none; font-weight:bold;">Live Demo</a>
+        <a href="#" style="flex:1; text-align:center; padding:8px; border:1px solid #38bdf8; color:#38bdf8; border-radius:8px; text-decoration:none;">Code</a>
+      </div>
     </div>
 
+    <!-- Project 2 -->
     <div class="card">
-      <h3>Students Project Management System</h3>
-      <p>Web-based system for managing student projects online.</p>
+      <img src="https://via.placeholder.com/400x250/1e293b/a78bfa?text=Project+System" 
+           alt="Student Project Management System" 
+           style="width:100%; border-radius:10px; margin-bottom:12px;">
+      <h3>Student Project Management</h3>
+      <p>Web-based system for managing student projects, submissions and tracking progress online.</p>
+      <div style="margin-top:15px; display:flex; gap:10px;">
+        <a href="#" style="flex:1; text-align:center; padding:8px; background:#38bdf8; color:black; border-radius:8px; text-decoration:none; font-weight:bold;">Live Demo</a>
+        <a href="#" style="flex:1; text-align:center; padding:8px; border:1px solid #38bdf8; color:#38bdf8; border-radius:8px; text-decoration:none;">Code</a>
+      </div>
     </div>
 
+    <!-- Project 3 -->
     <div class="card">
+      <img src="https://via.placeholder.com/400x250/1e293b/22c55e?text=Portfolio" 
+           alt="Portfolio Website" 
+           style="width:100%; border-radius:10px; margin-bottom:12px;">
       <h3>Portfolio Website</h3>
-      <p>Personal branding website for freelance work.</p>
+      <p>Personal branding website for freelancers with services, skills and contact form.</p>
+      <div style="margin-top:15px; display:flex; gap:10px;">
+        <a href="#" style="flex:1; text-align:center; padding:8px; background:#38bdf8; color:black; border-radius:8px; text-decoration:none; font-weight:bold;">Live Demo</a>
+        <a href="#" style="flex:1; text-align:center; padding:8px; border:1px solid #38bdf8; color:#38bdf8; border-radius:8px; text-decoration:none;">Code</a>
+      </div>
     </div>
+
   </div>
 </section>
-
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Let’s Work Together</h2>
@@ -291,11 +316,33 @@ footer{
 </section>
 <a href="#" class="back-top">⇪</a>
 <footer>
-  © 2025 Wajeeh | Freelance Web Developer | Available for Projects
+  © 2026 Wajeeh | Freelance Web Developer | Available for Projects
 </footer>
 <script>
+// Single scroll event for both features
 window.addEventListener('scroll', () => {
+  // 1. Back to top button
   document.querySelector('.back-top').classList.toggle('show', window.scrollY > 300);
+
+  // 2. Active nav link
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+  
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 100;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+    
+    if(top >= offset && top < offset + height){
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href") === "#" + id){
+          link.classList.add("active");
+        }
+      });
+    }
+  });
 });
 </script>
 </body>
