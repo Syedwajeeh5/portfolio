@@ -42,6 +42,7 @@ nav div{
   display:flex;
   align-items:center;
   flex-wrap:wrap;
+  justify-content:center;
 }
 
 nav a{
@@ -51,11 +52,21 @@ nav a{
   font-size:14px;
   transition:0.3s;
 }
+  nav a.active{
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+  }
 
 nav a:hover{
   color:#38bdf8;
 }
-
+ @media (max-width:600px)
+  { nav 
+                          { flex-direction: column; 
+                           gap: 10px; 
+                           padding: 15px 20px:
+                          }
+                         }
 
 .hero{
   height:90vh;
@@ -152,6 +163,20 @@ h2{
   margin:auto;
   text-align:left;
 }
+  back-top{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #38bdf8;
+  color: black;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  display: none;
+}
+.back-top.show 
+  { display: block; }
 
 /* FOOTER */
 footer{
@@ -160,6 +185,7 @@ footer{
   border-top:1px solid #1e293b;
   color:#94a3b8;
 }
+ 
 </style>
 
 </head>
@@ -182,7 +208,7 @@ footer{
 <div class="hero">
   <div>
     <h1>I Build Websites That Bring Clients</h1>
-    <p>Freelance Web Developer | WordPress | Landing Pages | Business Websites</p>
+    <p>Freelance Web Developer | WordPress & Landing Pages In 7 Days | No Fluff, only result</p>
     <a class="cta" href="#contact">🚀 Hire Me Now</a>
   </div>
 </div>
@@ -239,7 +265,7 @@ footer{
     </div>
 
     <div class="card">
-      <h3>University Project System</h3>
+      <h3>Students Project Management System</h3>
       <p>Web-based system for managing student projects online.</p>
     </div>
 
@@ -257,17 +283,20 @@ footer{
   <div class="card">
     📧 Email: xhahnaqvi125@gmail.com<br><br>
     🔗 LinkedIn: <a href="https://linkedin.com/in/s-wajeeh" target="_blank" style="color:#38bdf8;">View Profile</a><br><br>
-    📱 Mob: +92 303 8194658
   </div>
 
   <br>
 
-  <a class="cta" href="mailto:your-email@gmail.com">Send Email</a>
+  <a class="cta" href="mailto:xhahnaqvi125@gmail.com">Send Email</a>
 </section>
-
+<a href="#" class="back-top">⇪</a>
 <footer>
-  © 2026 Wajeeh | Freelance Web Developer | Available for Projects
+  © 2025 Wajeeh | Freelance Web Developer | Available for Projects
 </footer>
-
+<script>
+window.addEventListener('scroll', () => {
+  document.querySelector('.back-top').classList.toggle('show', window.scrollY > 300);
+});
+</script>
 </body>
 </html>
